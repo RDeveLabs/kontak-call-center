@@ -1,7 +1,5 @@
 'use client';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Image from "next/image";
 import dosen from "./data/kontakDosen";
