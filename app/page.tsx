@@ -6,27 +6,17 @@ import { useState } from "react";
 import Image from "next/image";
 import dosen from "./data/kontakDosen";
 import callCenter from "./data/callCenter";
+import Header from "./component/header";
 
 export default function Home() {
-
+    const [search, setSearch ] = useState("");
+    const filter = dosen.filter((d) => d.nama.toLowerCase().includes(search.toLowerCase()));
   return (
     <div className="min-w-max max-w-max h-max flex flex-col items-center justify-center">
-      <div className="header">
-        <div className="judul">
-          <h1 className="text-3xl font-bold">Daftar Kontak Dosen</h1>
-          <p className="text-lg">Universitas Pelita Bangsa</p>
-        </div>
-
-        <div className="flex items-center justify-center">
-          <div className="relative ml-6 ">
-            <FontAwesomeIcon className="absolute top-3 left-3 w-6" icon={faMagnifyingGlass}/>
-            <input className="border-2 rounded-4xl pl-10 p-1.5 pr-3 text-lg w-md" type="text" id="cari" placeholder="Cari Nama Dosen" />
-          </div>
-        </div>
-      </div>
+      <Header search={search} setSearch={setSearch} />
       <div className="body-card h-100 w-full rounded-tr-2xl rounded-bl-2xl rounded-br-2xl p-4">
         <div className="flex flex-col items-center justify-start h-full bg-gray-500 rounded-xl overflow-y-scroll box-border">
-          {dosen.map((d) => (
+          {filter.map((d) => (
             <div key={d.id} className="flex items-center justify-between p-2 m-2 text-black bg-white rounded-lg shadow-md w-[calc(100%-1rem)] shrink-0">
               <div>
                 <h2 className="text-xl font-bold">{d.nama}</h2>
