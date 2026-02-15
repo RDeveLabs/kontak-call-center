@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Image from "next/image";
 import dosen from "./data/kontakDosen";
+import callCenter from "./data/callCenter";
 
 export default function Home() {
 
