@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #bbbbbb;
+  --bg-container: #ededed;
+  --bg-tab: #cecece;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #bbbbbb;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.header{
+  display: flex;
+  position: relative;
+  color: #0a0a0a;
+  line-height: 0.7;
+}
+
+.judul{
+  position: relative;
+  background-color: var(--bg-container);
+  border-radius: 20px 20px 0 0;
+  padding: 20px 20px 10px;
+}
+
+.judul::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: -20px;
+  background: radial-gradient(
+    circle at top right,
+    transparent 20px,
+    var(--bg-container) 20px
+  );
+}
+
+.body-card{
+  background-color: var(--bg-container);
+}
+
+.tab{
+  background-color: var(--bg-tab);
+  color: #0a0a0a;
+  position: relative;
+  padding: 8px 8px;
+  border-radius: 0 0 24px 24px;
+}
