@@ -1,15 +1,3 @@
-// contoh pengisian :
-// {
-//     id: isi/lanjutin nomornya, <- jangan lupa kasih koma!
-//     nama: "isi nama kontaknya", 
-//     telp: "isi nomor teleponnya",
-// }, <-setelah } kasih koma!
-
-// note : 
-
-// 1. setelah } jangan lupa dikasih koma
-// 2. di setiap akhir parameternya jangan lupa kasih koma (contoh: id: 1, <- setelah 1 kasih koma/intinya di paling akhir)
-
 const callCenter = [
   {
     id: 1,
@@ -105,11 +93,11 @@ const callCenter = [
     telp: "085214977280",
   },{
     id: 24,
-    nama: "Pgsd",
+    nama: "PGSD",
     telp: "083839393822",
   },{
     id: 25,
-    nama: "PgPaud",
+    nama: "PGPAUD",
     telp: "082238747170",
   },{
     id: 26,

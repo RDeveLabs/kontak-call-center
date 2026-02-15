@@ -10,7 +10,7 @@ import Header from "./component/header";
 
 export default function Home() {
     const [search, setSearch ] = useState("");
-    const filter = dosen.filter((d) => d.nama.toLowerCase().includes(search.toLowerCase()));
+    const filter = callCenter.filter((d) => d.nama.toLowerCase().includes(search.toLowerCase()));
   return (
     <div className="min-w-max max-w-max h-max flex flex-col items-center justify-center">
       <Header search={search} setSearch={setSearch} />
