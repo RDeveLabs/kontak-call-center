@@ -7,7 +7,7 @@ interface HeaderProps {
     setSearch: (value: string) => void;
 }
 
-export default function Header({ search, setSearch }: HeaderProps) {
+export default function HeaderDesktop({ search, setSearch }: HeaderProps) {
     return (
         <div className="header">
             <div className="judul">
