@@ -3,8 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #bbbbbb;
-  --bg-container: #ededed;
+  --bg-container: #e2dfdf;
   --bg-tab: #cecece;
+  --bg-navbar: #0046FF;
+  --text-navbar: #F5F1DC;
+  --navbar-menu: #2845D6;
+  --navbar-menu-hover: #1A2CA3;
 }
 
 @theme inline {
@@ -16,13 +20,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #bbbbbb;
+    --background: #acacac;
     --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--bg-container);
   color: var(--foreground);
   display: flex;
   align-items: start;
@@ -71,6 +75,7 @@ body {
 
 @media (width >= 768px) {
   body {
+    background: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
