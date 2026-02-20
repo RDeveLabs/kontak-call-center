@@ -151,7 +151,7 @@ export default function Home() {
               {menu === "callCenter" && filterCallCenter.map((c) => (
                   <div key={c.id} className="flex items-center gap-4 justify-between p-2 m-2 text-black bg-white rounded-lg shadow-md w-[calc(100%-1rem)] shrink-0">
                     <div className="w-full">
-                      <h2 className="text-md font-bold">{c.nama}</h2>
+                      <h2 className="text-sm font-bold">{c.nama}</h2>
                       <table>
                         <tbody>
                           <tr>
@@ -166,7 +166,7 @@ export default function Home() {
                       <a href={`https://wa.me/+62${c.telp}`} className="w-full" target="_blank" rel="noopener noreferrer">
                         <div className="flex items-center justify-center gap-1 border-2 rounded-md p-1">
                           <Image src="/whatsapp.svg" alt="whatsapp" width={17} height={17} />
-                          <p>Kirim Pesan</p>
+                          <p className="text-[14px]">Kirim Pesan</p>
                         </div>
                       </a>
                     </div>
